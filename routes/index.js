@@ -19,7 +19,7 @@ router.get('/:timestamp', function(req, res, next) {
     unix = timestamp;
   } else if (moment(timestamp, "LL").isValid()){
     natural = timestamp;
-    unix = moment(timestamp, "LL").utcOffset(0).unix()
+    unix = moment(timestamp, "LL").utcOffset(0).unix();
   } else {
     natural = null;
     unix = null;
